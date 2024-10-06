@@ -42,7 +42,7 @@ jobs:
               run: npm run build
             - name: Rename
               run: |
-                ls
+                ls dist
     build-linux:
         runs-on: ubuntu-latest
         steps:
@@ -58,4 +58,4 @@ jobs:
               run: npm run build
             - name: Rename
               run: |
-                ls
+                ls dist
