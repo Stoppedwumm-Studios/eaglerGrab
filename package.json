@@ -17,10 +17,12 @@
   "build": {
     "appId": "com.stoppedwumm.eaglergrab",
     "mac": {
-      "category": "public.app-category.games"
+      "category": "public.app-category.games",
+      "icon": "build/icon.icns"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/icon.ico"
     }
   }
 }
