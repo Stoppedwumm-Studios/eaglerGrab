@@ -42,7 +42,12 @@ jobs:
               run: npm run build
             - name: Rename
               run: |
-                ls dist
+                cp "dist/eaglergrab Setup 1.0.0.exe" dist/setup-win.exe
+            - name: Upload
+              uses: actions/upload-artifact@v3
+              with:
+                name: setup-win.exe
+                path: dist/setup-win.exe
     build-linux:
         runs-on: ubuntu-latest
         steps:
@@ -58,4 +63,9 @@ jobs:
               run: npm run build
             - name: Rename
               run: |
-                ls dist
+                cp dist/eaglergrab-1.0.0.AppImage dist/release-linux.AppImage
+            - name: Upload
+              uses: actions/upload-artifact@v3
+              with:
+                name: release-linux.AppImage
+                path: dist/release-linux.AppImage
