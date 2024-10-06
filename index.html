@@ -10,11 +10,70 @@
             color: white;
             background-color: black;
         }
+
+        .banner {
+            width: 100%;
+        }
+
+        header {
+            text-align: left;
+            align-items: left;
+            align-content: left;
+            flex-direction: row;
+            justify-content: space-between;
+            display: flex;
+            position: fixed;
+            background-color: black;
+            width: 98%;
+            padding-top: 0%;
+        }
+
+        .logo {
+            width: 100px
+        }
+
+        .app {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        .start {
+            background-color: #02ff0a;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Hello, World!</h1>
-    <script src="./renderer.js"></script>
+    <header>
+        <img class="logo" src="./binaries/logo.jpeg" />
+        <div>
+            <h1>EaglerGrab</h1>
+            <h2>The only eaglercraft launcher existing</h2>
+        </div>
+
+    </header>
+    <img class="banner" src="./binaries/background.jpeg" />
+    <div class="app">
+        <h1>Start latest Version</h1>
+        <p>This version runs an cached version of the game</p>
+        <p>Update your launcher regulary to get the latest version</p>
+        <button class="start" onclick="window.electronAPI.start()">Start</button>
+        <h2>About Eaglercraft</h2>
+        <p>Developed by a high school student because original Minecraft isn't free</p>
+        <p>All Java was translated to JavaScript and HTML</p>
+        <p>The newest Version is 1.8</p>
+        
+    </div>
 </body>
+
 </html>
