@@ -49,6 +49,7 @@ app.on('ready', () => {
     copyFile(path.join(__dirname, 'binaries', "latest.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'latest.html'))
     copyFile(path.join(__dirname, 'binaries', "dev.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'dev.html'))
     copyFile(path.join(__dirname, 'binaries', "arch.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'arch.html'))
+    copyFile(path.join(__dirname, 'binaries', "settings.js"), path.join(homeDirectory, './eaglergrab', 'versions', 'settings.js'))
 
     ipcMain.handle("start", () => {
         win.loadFile(path.join(homeDirectory, "./eaglergrab", "versions", "latest.html"))
