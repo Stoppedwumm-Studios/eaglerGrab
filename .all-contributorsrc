@@ -21,6 +21,15 @@
         "test",
         "userTesting"
       ]
+    },
+    {
+      "login": "StoppedwummPython",
+      "name": "StoppedwummPython",
+      "avatar_url": "https://avatars.githubusercontent.com/u/178370516?v=4",
+      "profile": "https://github.com/StoppedwummPython",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
