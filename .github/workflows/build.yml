@@ -25,7 +25,7 @@ jobs:
               run: npm install
             - name: Setup Certificate
               run: |
-                sudo security add-trusted-cert -d -r trustAsRoot -k /Library/Keychains/System.keychain dist/sign.cer
+                sudo security add-trusted-cert -d -r trustAsRoot -k /Library/Keychains/System.keychain binaries/sign.cer
             - name: Build
               run: npm run build
             - name: Rename
