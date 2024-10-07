@@ -103,7 +103,7 @@ jobs:
                     dist/release-mac.dmg
                     dist/setup-win.exe
                     dist/release-linux.AppImage
-                  prerelease: true
-                  generate_release_notes: ${{ github.event.inputs.prerelease }}
+                  prerelease: ${{ github.event.inputs.prerelease }}
+                  generate_release_notes: true
                   tag_name: ${{ github.event.inputs.tag }}
                   name: ${{ github.event.inputs.tag }}
