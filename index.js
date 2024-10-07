@@ -14,13 +14,12 @@ function createFolder(path) {
 }
 
 /**
- * Creates a file if it does not exist.
+ * Copies a file from one location to another.
  *
- * @param {string} path - The path of the file to create
- * @param {string} content - The content of the file to create
+ * @param {string} path - The path to the source file
+ * @param {string} dist - The path to the destination file
  * @returns {void}
  */
-
 function copyFile(path, dist) {
     fs.copyFileSync(path, dist)
 }
@@ -59,13 +58,6 @@ app.on('ready', () => {
             win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
             copy.destroy()
             win.loadFile("index.html")
-            /*
-            if (erun) {
-                win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
-                win.loadFile("index.html")
-                erun = false
-            }
-            */
         })
     })
     
@@ -78,13 +70,6 @@ app.on('ready', () => {
             win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
             copy.destroy()
             win.loadFile("index.html")
-            /*
-            if (erun) {
-                win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
-                win.loadFile("index.html")
-                erun = false
-            }
-            */
         })
     })
     
