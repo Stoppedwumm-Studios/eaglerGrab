@@ -14,7 +14,12 @@
       "profile": "https://github.com/Stoppedwumm",
       "contributions": [
         "bug",
-        "code"
+        "code",
+        "design",
+        "ideas",
+        "research",
+        "test",
+        "userTesting"
       ]
     }
   ],

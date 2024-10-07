@@ -14,7 +14,7 @@
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Stoppedwumm"><img src="https://avatars.githubusercontent.com/u/129097720?v=4?s=100" width="100px;" alt="Stoppedwumm"/><br /><sub><b>Stoppedwumm</b></sub></a><br /><a href="https://github.com/Stoppedwumm/eaglerGrab/issues?q=author%3AStoppedwumm" title="Bug reports">🐛</a> <a href="https://github.com/Stoppedwumm/eaglerGrab/commits?author=Stoppedwumm" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Stoppedwumm"><img src="https://avatars.githubusercontent.com/u/129097720?v=4?s=100" width="100px;" alt="Stoppedwumm"/><br /><sub><b>Stoppedwumm</b></sub></a><br /><a href="https://github.com/Stoppedwumm/eaglerGrab/issues?q=author%3AStoppedwumm" title="Bug reports">🐛</a> <a href="https://github.com/Stoppedwumm/eaglerGrab/commits?author=Stoppedwumm" title="Code">💻</a> <a href="#design-Stoppedwumm" title="Design">🎨</a> <a href="#ideas-Stoppedwumm" title="Ideas, Planning, & Feedback">🤔</a> <a href="#research-Stoppedwumm" title="Research">🔬</a> <a href="https://github.com/Stoppedwumm/eaglerGrab/commits?author=Stoppedwumm" title="Tests">⚠️</a> <a href="#userTesting-Stoppedwumm" title="User Testing">📓</a></td>
     </tr>
   </tbody>
 </table>
