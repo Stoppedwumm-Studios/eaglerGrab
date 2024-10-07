@@ -23,10 +23,6 @@ jobs:
                   node-version: 20
             - name: Install
               run: npm install
-            - name: Setup Certificate
-              run: |
-                sudo security add-trusted-cert -d -r trustAsRoot -k /Library/Keychains/System.keychain binaries/sign.cer
-                security find-identity -v
             - name: Build
               run: npm run build
             - name: Rename
