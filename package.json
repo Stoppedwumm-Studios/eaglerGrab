@@ -18,8 +18,7 @@
     "appId": "com.stoppedwumm.eaglergrab",
     "mac": {
       "category": "public.app-category.games",
-      "icon": "build/icon.icns",
-      "sign": false
+      "icon": "build/icon.icns"
     },
     "win": {
       "target": "nsis",
@@ -27,8 +26,7 @@
     },
     "dmg": {
       "title": "EaglerGrab Setup",
-      "icon": "build/icon.icns",
-      "sign": false
+      "icon": "build/icon.icns"
     }
   }
 }
