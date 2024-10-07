@@ -48,6 +48,7 @@ app.on('ready', () => {
     createFolder(path.join(homeDirectory, './eaglergrab', 'versions'))
     copyFile(path.join(__dirname, 'binaries', "latest.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'latest.html'))
     copyFile(path.join(__dirname, 'binaries', "dev.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'dev.html'))
+    copyFile(path.join(__dirname, 'binaries', "arch.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'arch.html'))
 
     ipcMain.handle("start", () => {
         win.loadFile(path.join(homeDirectory, "./eaglergrab", "versions", "latest.html"))
@@ -73,6 +74,17 @@ app.on('ready', () => {
         })
     })
     
+    ipcMain.handle("arch", () => {
+        win.loadFile(path.join(homeDirectory, "./eaglergrab", "versions", "arch.html"))
+        erun = true
+        win.on("close", (e) => {
+            e.preventDefault()
+            let copy = win
+            win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
+            copy.destroy()
+            win.loadFile("index.html")
+        })
+    })
 
     win.loadFile('index.html')
 })
