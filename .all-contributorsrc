@@ -1,0 +1,32 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Stoppedwumm",
+      "name": "Stoppedwumm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/129097720?v=4",
+      "profile": "https://github.com/Stoppedwumm",
+      "contributions": [
+        "bug",
+        "code",
+        "design",
+        "ideas",
+        "research",
+        "test",
+        "userTesting"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "eaglerGrab",
+  "projectOwner": "Stoppedwumm"
+}
