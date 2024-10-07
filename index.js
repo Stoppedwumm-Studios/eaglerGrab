@@ -35,7 +35,8 @@ app.on('ready', () => {
      * The preload script exposes an API in the "electronAPI" object that can be
      * accessed in the renderer.
      */
-    const win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
+    let win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
+    let erun = false
 
 
     /**
@@ -50,11 +51,21 @@ app.on('ready', () => {
 
     ipcMain.handle("start", () => {
         win.loadFile(path.join(homeDirectory, "./eaglergrab", "versions", "latest.html"))
-    })
-
-    win.on("close", (e) => {
-        e.preventDefault()
-        win.destroy()
+        erun = true
+        win.on("close", (e) => {
+            e.preventDefault()
+            let copy = win
+            win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
+            copy.destroy()
+            win.loadFile("index.html")
+            /*
+            if (erun) {
+                win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
+                win.loadFile("index.html")
+                erun = false
+            }
+            */
+        })
     })
     
     
