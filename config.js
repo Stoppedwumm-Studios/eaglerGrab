@@ -2,6 +2,10 @@ const config = {
     enableArch: false,
 }
 
+if (!config.enableArch) {
+    document.getElementById("archB").remove()
+}
+
 console.log("Executed")
 document.getElementById("archB").onclick = () => {
     console.log("Arch")
