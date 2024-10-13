@@ -28,5 +28,8 @@
       "title": "EaglerGrab Setup",
       "icon": "build/icon.icns"
     }
+  },
+  "dependencies": {
+    "vanillajscream": "^1.1.0"
   }
 }
