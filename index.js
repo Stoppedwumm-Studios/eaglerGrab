@@ -1,6 +1,15 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('node:path')
 const fs = require('fs')
+const vanillajscream = require('vanillajscream')
+const test = new vanillajscream.render.component()
+const test2 = new vanillajscream.render.webpage()
+
+test.setHtml("<h1>Hello World</h1>")
+test2.setBody(test.render())
+console.log(test2.render())
+
+
 /**
  * Creates a folder if it does not exist.
  *
