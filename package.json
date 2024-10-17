@@ -30,6 +30,6 @@
     }
   },
   "dependencies": {
-    "vanillajscream": "^1.1.0"
+    "vanillajscream": "^1.3.0"
   }
 }
