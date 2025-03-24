@@ -97,7 +97,7 @@ jobs:
                   name: release-linux.AppImage
                   path: dist
             - name: Release
-              uses: softprops/action-gh-release@v2
+              uses: softprops/action-gh-release@v2.2.1
               with:
                   files: |
                     dist/release-mac.dmg
