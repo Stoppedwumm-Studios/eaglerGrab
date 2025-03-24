@@ -29,7 +29,7 @@ jobs:
               run: |
                 cp dist/eaglergrab-1.0.0-arm64.dmg dist/release-mac.dmg
             - name: Upload
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: release-mac.dmg
                   path: dist/release-mac.dmg
@@ -50,7 +50,7 @@ jobs:
               run: |
                 cp "dist/eaglergrab Setup 1.0.0.exe" dist/setup-win.exe
             - name: Upload
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                 name: setup-win.exe
                 path: dist/setup-win.exe
@@ -71,7 +71,7 @@ jobs:
               run: |
                 cp dist/eaglergrab-1.0.0.AppImage dist/release-linux.AppImage
             - name: Upload
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                 name: release-linux.AppImage
                 path: dist/release-linux.AppImage
@@ -82,17 +82,17 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
             - name: Download Mac
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: release-mac.dmg
                   path: dist
             - name: Download Windows
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: setup-win.exe
                   path: dist
             - name: Download Linux
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: release-linux.AppImage
                   path: dist
