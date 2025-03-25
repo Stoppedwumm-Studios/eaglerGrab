@@ -55,10 +55,12 @@ app.on('ready', () => {
     const homeDirectory = os.homedir()
     createFolder(path.join(homeDirectory, './eaglergrab'))
     createFolder(path.join(homeDirectory, './eaglergrab', 'versions'))
+    createFolder(path.join(homeDirectory, "./eaglergrab", "versions", "settings"))
     copyFile(path.join(__dirname, 'binaries', "latest.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'latest.html'))
     copyFile(path.join(__dirname, 'binaries', "dev.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'dev.html'))
     copyFile(path.join(__dirname, 'binaries', "arch.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'arch.html'))
     copyFile(path.join(__dirname, 'binaries', "settings.js"), path.join(homeDirectory, './eaglergrab', 'versions', 'settings.js'))
+    copyFile(path.join(__dirname, 'binaries', 'arch.js'), path.join(homeDirectory, "./eaglergrab", "versions", "settings", "arch.js"))
 
     ipcMain.handle("start", () => {
         win.loadFile(path.join(homeDirectory, "./eaglergrab", "versions", "latest.html"))
