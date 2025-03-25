@@ -40,7 +40,7 @@ function copyFile(path, dist) {
 app.on('ready', () => {
     /**
      * The preload script is loaded before the renderer (index.html) is loaded.
-     * The preload script exposes an API in the "electronAPI" object that can be
+     * The preload script exposes an API in the "eaglerGrabAPI" object that can be
      * accessed in the renderer.
      */
     let win = new BrowserWindow({ width: 800, height: 600, webPreferences: { preload: path.join(__dirname, 'preload.js') } })
