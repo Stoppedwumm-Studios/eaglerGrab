@@ -1,5 +1,5 @@
 const config = {
-    enableArch: true,
+    enableArch: false,
 }
 
 if (!config.enableArch) {
