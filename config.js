@@ -15,7 +15,7 @@ console.log("Executed")
 document.getElementById("archB").onclick = () => {
     console.log("Arch")
     if (config.enableArch) {
-        window.electronAPI.arch()
+        window.eaglerGrabAPI.arch()
     } else {
         alert("Arch is disabled")
     }
