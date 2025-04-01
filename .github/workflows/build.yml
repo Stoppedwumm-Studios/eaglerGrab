@@ -45,10 +45,23 @@ jobs:
                 cd eaglergrab-source-compiler
                 java -cp "desktopRuntime/MakeOfflineDownload.jar:desktopRuntime/CompileEPK.jar" net.lax1dude.eaglercraft.v1_8.buildtools.workspace.MakeOfflineDownload "../binary-templates/arch.txt" "javascript/classes.js" "javascript/assets.epk" "javascript/EaglercraftX_1.8_Offline_en_US.html" "../binaries/arch.html" "javascript/lang"
                 cat ../binary-templates/arch.txt
+            - name: Upload binaries
+              uses: actions/upload-artifact@v4
+              with:
+                name: eaglercraftbuild
+                path: |
+                  binaries
     build-mac:
         runs-on: macos-latest
         needs: [build-eaglercraft]
         steps:
+            - name: Delete all
+              run: |
+                rm -rf binaries
+            - uses: actions/download-artifact@v4
+              with:
+                name: eaglercraftbuild
+                path: binaries
             - name: Checkout
               uses: actions/checkout@v3
             - name: Setup Node
@@ -71,6 +84,13 @@ jobs:
         runs-on: windows-latest
         needs: [build-eaglercraft]
         steps:
+            - name: Delete all
+              run: |
+                rmdir /s /q binaries
+            - uses: actions/download-artifact@v4
+              with:
+                name: eaglercraftbuild
+                path: binaries
             - name: Checkout
               uses: actions/checkout@v3
             - name: Setup Node
@@ -99,6 +119,13 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: 20
+            - name: Delete all
+              run: |
+                rm -rf binaries
+            - uses: actions/download-artifact@v4
+              with:
+                name: eaglercraftbuild
+                path: binaries
             - name: Install
               run: npm install
             - name: Build
