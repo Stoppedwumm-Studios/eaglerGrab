@@ -86,7 +86,7 @@ jobs:
         steps:
             - name: Delete all
               run: |
-                del /s binaries
+                rm binaries -r -fo
             - uses: actions/download-artifact@v4
               with:
                 name: eaglercraftbuild
