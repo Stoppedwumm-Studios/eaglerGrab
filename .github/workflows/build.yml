@@ -10,6 +10,10 @@ on:
             description: 'Prerelease'
             type: boolean
             default: false
+    push:
+        branches:
+            - dev
+            - main
 
 jobs:
     build-eaglercraft:
@@ -97,6 +101,7 @@ jobs:
     release:
         runs-on: ubuntu-latest
         needs: [build-mac, build-win, build-linux]
+        if: ${{ github.event_name == 'workflow_dispatch' }}
         steps:
             - name: Checkout
               uses: actions/checkout@v3
