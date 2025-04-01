@@ -55,6 +55,12 @@ jobs:
         runs-on: macos-latest
         needs: [build-eaglercraft]
         steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20
             - name: Delete all
               run: |
                 rm -rf binaries
@@ -62,12 +68,6 @@ jobs:
               with:
                 name: eaglercraftbuild
                 path: binaries
-            - name: Checkout
-              uses: actions/checkout@v3
-            - name: Setup Node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 20
             - name: Install
               run: npm install
             - name: Build
@@ -86,7 +86,7 @@ jobs:
         steps:
             - name: Delete all
               run: |
-                rmdir /s /q binaries
+                del /s binaries
             - uses: actions/download-artifact@v4
               with:
                 name: eaglercraftbuild
