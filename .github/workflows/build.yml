@@ -84,20 +84,20 @@ jobs:
         runs-on: windows-latest
         needs: [build-eaglercraft]
         steps:
-            - name: Delete all
-              run: |
-                dir
-                
-            - uses: actions/download-artifact@v4
-              with:
-                name: eaglercraftbuild
-                path: binaries
             - name: Checkout
               uses: actions/checkout@v3
             - name: Setup Node
               uses: actions/setup-node@v3
               with:
                   node-version: 20
+            - name: Delete all
+              run: |
+                dir
+                rm -r -fo binaries
+            - uses: actions/download-artifact@v4
+              with:
+                name: eaglercraftbuild
+                path: binaries
             - name: Install
               run: npm install
             - name: Build
