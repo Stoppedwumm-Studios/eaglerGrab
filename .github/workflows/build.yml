@@ -34,7 +34,8 @@ jobs:
                   echo "Finished Building EPK, continuing with JS"
                   chmod +x gradlew
                   ./gradlew generateJavascript --watch-fs --info
-                  echo "Done building all scripts"
+                  echo "Done building all scripts, copying assets"
+                  cp javascript/assets.epk ../binaries/assets.epk
             - name: Generate general config
               run: |
                 cd eaglergrab-source-compiler

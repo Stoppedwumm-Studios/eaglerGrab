@@ -15,5 +15,6 @@ export default {
         { addr: "wss://mc.arch.lol/", name: "Arch MC" }
     ],
 	allowBootMenu: false,
-	enableMinceraft: true
+	enableMinceraft: true,
+	assetsURI: "assets.epk"
 };

@@ -18,7 +18,8 @@ export default {
     ],
 	allowBootMenu: false,
 	enableMinceraft: false,
-	joinServer: "wss://mc.arch.lol/"
+	joinServer: "wss://mc.arch.lol/",
+	assetsURI: "assets.epk"
 };
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
