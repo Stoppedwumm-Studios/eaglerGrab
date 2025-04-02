@@ -37,6 +37,7 @@ Compile it yourself here: https://gitlab.com/lax1dude/eaglercraftx-1.8/
 <meta property="og:description" content="this file is not a website, whoever uploaded it to this URL is a dumbass" />
 <script type="module">
 	import settings from "./settings/latest.js"
+	console.log("settings:", settings)
 	window.eaglercraftXOptsHints = settings
 	</script>
 <script type="text/javascript">

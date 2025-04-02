@@ -7,7 +7,6 @@ const test2 = new vanillajscream.render.webpage()
 
 test.setHtml("<h1>Hello World</h1>")
 test2.setBody(test.render())
-console.log(test2.render())
 
 
 /**
@@ -61,6 +60,7 @@ app.on('ready', () => {
     copyFile(path.join(__dirname, 'binaries', "arch.html"), path.join(homeDirectory, './eaglergrab', 'versions', 'arch.html'))
     copyFile(path.join(__dirname, 'binaries', "settings.js"), path.join(homeDirectory, './eaglergrab', 'versions', 'settings.js'))
     copyFile(path.join(__dirname, 'binaries', 'settings', 'arch.js'), path.join(homeDirectory, "./eaglergrab", "versions", "settings", "arch.js"))
+    copyFile(path.join(__dirname, 'binaries', 'settings', 'latest.js'), path.join(homeDirectory, "./eaglergrab", "versions", "settings", "latest.js"))
 
     ipcMain.handle("start", () => {
         win.loadFile(path.join(homeDirectory, "./eaglergrab", "versions", "latest.html"))
